@@ -20,7 +20,7 @@ class GuessWords {
         return json_decode($data,true);
     }
 
-    function GetText($content){
+    public function GuessParagraph($content){
         $content = preg_split('//u', $content, null, PREG_SPLIT_NO_EMPTY);
         $new_content = '';
         $temp = $content[0];
@@ -59,7 +59,6 @@ class GuessWords {
                                     $reset = true;
                                     continue;
                                 }
-                            }else{
                             }
                             $find = 0;
                             $this->continueStep = $key +$i;
